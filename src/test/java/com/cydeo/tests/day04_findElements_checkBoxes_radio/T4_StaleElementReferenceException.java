@@ -26,7 +26,7 @@ public class T4_StaleElementReferenceException {
         driver.navigate().refresh();
         System.out.println("Refreshing the page...");
         //5- Verify it is displayed, again.
-        cydeoLink = driver.findElement(By.xpath("//a[.='CYDEO']"));
+        cydeoLink = driver.findElement(By.xpath("//a[.='CYDEO']"));//re-assign & relocate to create a new state element reference
         System.out.println("After refresh: cydeoLink.isDisplayed() = " + cydeoLink.isDisplayed());
         //This is a simple StaleElementReferenceException to understand what is
         //this exception and how to handle it.
