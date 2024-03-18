@@ -10,8 +10,10 @@ import java.time.Duration;
 public class T4_StaleElementReferenceException {
     public static void main(String[] args) {
         //TC #4: StaleElementReferenceException Task
-        //1- Open a chrome browservdfafa
+        //1- Open a chrome browser
+        // TEST
         WebDriver driver = WebDriverFactory.getDriver("Chrome");
+        driver.manage().window().maximize();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
